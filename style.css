@@ -1,0 +1,138 @@
+body{
+    background-color: #333;
+    color:white;
+}
+
+.logo{
+    font-size:30px;
+    margin:20px;
+    box-sizing: border-box;
+}
+.container{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content:space-between;
+    margin:350px;
+    
+}
+.port{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 600;
+    color:white;
+    padding:20px;
+    position:relative;
+}
+nav a::after{
+     content:"";
+     position:absolute;
+     bottom:0;
+     left:0;
+     height:8px;
+     width:0;
+     background: rgb(14, 0, 0);
+     transition: width 0.3s ease-in-out;
+
+}
+nav a:hover::after{
+    width:100%
+}
+img{
+    height:400px;
+    width:300px;
+    border-radius: 50%;
+}
+h4{
+font-size:20px;
+}
+h5{
+    font-size: 25px;
+}
+h6{
+    font-size: 20px;
+}
+
+form{
+    background-color: black;
+    padding:5px;
+    height:500px;
+    width:300px;
+    margin:500px;
+    border-radius: 5px;
+    
+
+}
+button{
+    margin:70px;
+    border-radius:3px;
+    cursor: pointer;
+
+}
+input{
+    margin:5px;
+}
+textarea{
+    margin-top: 5px;
+    margin-left:15px;
+}
+.footer{
+    text-align: center;
+}
+#heart{
+    color:red;
+    animation :pulse 1s infinite ease-in-out;
+}
+
+@keyframes pulse{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+    100%{
+        transform:scale(1.09)
+    }
+}
+.hamburger{
+    display:none;
+    font-size: 1.5rem;
+    cursor:pointer;
+}
+@media (max-width:768px) {
+    .navbar  {
+        display:none;
+        flex-direction:column;
+        background-color: #333;
+        position:absolute;
+        top:60px;
+        right:20px;
+        width:200px;
+        padding:10px;
+        border-radius: 5px;
+        
+    }
+    .navbar a:active{
+        display:flex;
+        color:white;
+    }
+    .hamburger{
+        display:block;
+        height:1.5rem;
+        color:white;
+        
+    }
+    .container{
+        height:500px;
+        width:500px;
+    }
+}
